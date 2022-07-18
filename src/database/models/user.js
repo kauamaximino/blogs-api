@@ -1,4 +1,9 @@
-'use scrict'
+'use scrict';
+
+/**
+ * @param {import('sequelize').Sequelize} sequelize
+ * @param {import('sequelize').DataTypes} DataTypes
+ */
 
 const User = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
@@ -15,10 +20,10 @@ const User = (sequelize, DataTypes) => {
     timestamps: false,
   });
 
-  User.associate = (db) => {
-    User.hasMany(db.BlogPost, { as: 'blogPost', foreignKey: 'userId' });
-  };
-  
+  // User.associate = (db) => {
+  //   User.hasMany(db.BlogPost, { as: 'blogPost', foreignKey: 'userId' });
+  // };
+
   return User
 };
 

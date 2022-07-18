@@ -1,6 +1,8 @@
-// const express = require('express');
-// const router = express.Router();
+const express = require('express');
+const login = require('./login.routes');
 
-// router.post('/', (request, response) => { 
-  
-// });
+const router = express.Router();
+
+router.use(login);
+
+module.exports = router;
