@@ -24,7 +24,7 @@ const User = (sequelize, DataTypes) => {
   //   User.hasMany(db.BlogPost, { as: 'blogPost', foreignKey: 'userId' });
   // };
 
-  return User
+  return User;
 };
 
 module.exports = User;
