@@ -6,4 +6,6 @@ const user = express.Router();
 
 user.post('/user', middlewares.insertUserValidate, userControllers.postUser);
 
+user.get('/user', middlewares.tokenValidate, userControllers.getAllUsers);
+
 module.exports = user;

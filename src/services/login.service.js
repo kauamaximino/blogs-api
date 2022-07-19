@@ -9,4 +9,6 @@ const postLogin = async (email) => {
   return generateToken(email);
 };
 
-module.exports = { postLogin };
+module.exports = {
+  postLogin,
+};

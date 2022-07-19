@@ -11,6 +11,16 @@ const postUser = async (request, response) => {
   }
 };
 
+const getAllUsers = async (_request, response) => {
+  try {
+    const users = await userService.getAllUsers();
+    response.status(200).json(users);
+  } catch (error) {
+    response.status(500).json({ message: error.message });
+  }
+};
+
 module.exports = {
   postUser,
+  getAllUsers,
 };
