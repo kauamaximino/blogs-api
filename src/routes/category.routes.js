@@ -4,7 +4,9 @@ const middlewares = require('../middlewares/index');
 
 const category = express.Router();
 
-category.post('/categories', middlewares.tokenValidate, CategoryControllers.postCategory);
+category.post('/categories',
+  middlewares.insertCategory, middlewares.tokenValidate, CategoryControllers.postCategory);
+
 category.get('/categories', middlewares.tokenValidate, CategoryControllers.getAllCategories);
 
 module.exports = category;
