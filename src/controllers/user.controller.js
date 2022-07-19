@@ -20,7 +20,18 @@ const getAllUsers = async (_request, response) => {
   }
 };
 
+const getUserID = async (request, response) => {
+  try {
+    const { id } = request.params;
+    const userID = await userService.getUserID(id);
+    response.status(200).json(userID);
+  } catch (error) {
+    response.status(404).json({ message: error.message });
+  }
+};
+
 module.exports = {
   postUser,
   getAllUsers,
+  getUserID,
 };
