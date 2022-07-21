@@ -9,11 +9,11 @@ const PostCategory = (sequelize, DataTypes) => {
   const PostCategory = sequelize.define('PostCategory', {
     postId: {
       type: DataTypes.INTEGER,
-      foreingKey: true,
+      primaryKey: true,
     },
     categoryId: {
       type: DataTypes.INTEGER,
-      foreingKey: true,
+      primaryKey: true,
     }
   }, {
     tableName: 'PostCategories',
@@ -28,7 +28,7 @@ const PostCategory = (sequelize, DataTypes) => {
       through: PostCategory,
     });
     db.BlogPost.belongsToMany(db.Category, {
-      as: 'postBlogPost',
+      as: 'BlogPost',
       foreingKey: 'postId',
       otherKey: 'categoryId',
       through: PostCategory,
