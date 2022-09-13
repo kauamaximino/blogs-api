@@ -27,10 +27,10 @@ git clone git@github.com:kauamaximino/blogs-api.git
 cd blogs-api
 
 # Instale as dependências
-$ npm install
+npm install
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run debug
+npm run debug
 
 # O servidor inciará na porta:3000 - acesse http://localhost:3000  
 
